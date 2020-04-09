@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body {
+        height: 2000px;
+        background: linear-gradient(white, blue);
+      }
+      .sticky-box {
+        position: sticky;
+        top: 20px;
+        left: 0;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .target-box {
+        margin-top: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-box">Sticky</div>
+    <div class="target-box">Target</div>
+    <ul>
+      <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API">日本語のMDNのマニュアル</a>から兄弟関係の要素の交差についての仕様を読み取れなかったので、一応試してみたもの。</li>
+      <li>結果はダメでした。</li>
+    </ul>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        // 初期化時に entry.isIntersecting が false の状態で呼び出されるが、
+        //   以後は見た目上交差しても呼び出されない。
+        const callback = (entries) => {
+          entries.forEach(entry => {
+            console.log(entry)
+          })
+        }
+        const observer = new IntersectionObserver(callback, {
+          root: document.querySelector('.sticky-box'),
+        })
+        observer.observe(document.querySelector('.target-box'))
+      })
+    </script>
+  </body>
+</html>
