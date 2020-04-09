@@ -2,7 +2,6 @@
   "name": "investigate-intersectionobserver",
   "version": "0.0.0",
   "description": "Investigate Intersection Observer specification",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +17,6 @@
   "homepage": "https://github.com/kjirou/investigate-IntersectionObserver#readme",
   "devDependencies": {
     "http-server": "^0.12.1"
-  }
+  },
+  "private": true
 }
