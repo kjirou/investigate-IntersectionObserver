@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kjirou/investigate-IntersectionObserver/issues"
   },
-  "homepage": "https://github.com/kjirou/investigate-IntersectionObserver#readme"
+  "homepage": "https://github.com/kjirou/investigate-IntersectionObserver#readme",
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  }
 }
