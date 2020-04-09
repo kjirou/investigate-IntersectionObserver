@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Investigate Intersection Observer specification",
   "scripts": {
+    "start": "$(npm bin)/http-server ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
